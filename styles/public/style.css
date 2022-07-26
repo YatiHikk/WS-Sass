@@ -119,6 +119,11 @@
     justify-content: space-around;
   }
 }
+.main-landing .container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
 .main-landing .landing-buttons__primary {
   font-size: 17px;
   margin-right: 40px;

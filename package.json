@@ -10,9 +10,13 @@
     "eslint": "npx eslint \"**.js\"",
     "start": "npm run eslint && npm run stylelint && npm run sass"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Ekaterina Ponomareva",
+  "license": "",
   "dependencies": {
+    "date-fns": "^2.28.0",
+    "moment": "^2.29.2"
+  },
+  "devDependencies": {
     "eslint": "^8.19.0",
     "sass": "^1.53.0",
     "stylelint": "^14.9.1",
@@ -21,3 +25,4 @@
     "stylelint-config-standard-scss": "^3.0.0"
   }
 }
+
