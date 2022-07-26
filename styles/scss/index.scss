@@ -1,0 +1,20 @@
+@import 'mixins';
+@import 'header';
+@import 'main-landing';
+@import 'reset';
+@import 'variables';
+@import 'main-bottom';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+}

@@ -1,0 +1,31 @@
+@import 'variables';
+
+@mixin font-reduction($fontSizeNew, $lineHeightNew) {
+  @include max-width(780) {
+    font-size: $fontSizeNew * 0.85;
+    line-height: $lineHeightNew * 0.85;
+  }
+
+  @include max-width(600) {
+    font-size: $fontSizeNew * 0.7;
+    line-height: $lineHeightNew * 0.7;
+  }
+}
+
+@mixin font-size($fontSize, $lineHeight) {
+  font-size: $fontSize;
+  line-height: $lineHeight;
+
+  &__text {
+    @include max-width(600) {
+      font-size: $fontSize * 0.8;
+      line-height: $lineHeight * 0.8;
+    }
+  }
+}
+
+@mixin max-width($resolution) {
+  @media screen and (max-width: #{$resolution}px) {
+    @content;
+  }
+}
