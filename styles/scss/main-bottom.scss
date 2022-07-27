@@ -104,30 +104,13 @@
       border-radius: $border-radius;
       transition: $default-transition;
 
-      .price {
-        display: flex;
-        justify-content: center;
-      }
-
-      &__text {
-        width: 160px;
-        height: 150px;
-        margin-top: 28px;
-        display: inline-block;
-
-        &:hover {
-          color: $white;
-        }
-      }
-
-      &__description {
-        font-size: 18px;
-        margin-top: 34px;
-        margin-bottom: 22px;
-
-        &:hover {
-          color: $white;
-        }
+      &:hover {
+        color: $white;
+        width: 376px;
+        height: 473px;
+        background: $accent-hover;
+        transition: $default-transition;
+        cursor: pointer;
       }
 
       &__button {
@@ -138,62 +121,34 @@
         border-radius: $border-radius;
         margin-top: 36px;
         transition: $default-transition;
-
-        @include max-width(1250) {
-          width: 60%;
-        }
-
-        @include max-width(1100) {
-          width: 70%;
-        }
       }
 
-      &:hover {
-        width: 376px;
-        height: 473px;
-        background: $accent-hover;
+      button {
+        background: $accent-hover-button;
+        color: $white;
         transition: $default-transition;
-        cursor: pointer;
-
-        @include max-width(1250) {
-          width: 40%;
-        }
-
-        @include max-width(1100) {
-          width: 60%;
-          margin: 20px;
-        }
-
-        @include max-width(850) {
-          width: 80%;
-        }
-
-        button {
-          background: $accent-hover-button;
-          color: $white;
-          transition: $default-transition;
-          border: none;
-        }
-
-        p,
-        h2,
-        text {
-          color: $white;
-        }
+        border: none;
       }
 
-      @include max-width(1250) {
-        width: 30%;
+      p,
+      h2,
+      text {
+        font-size: 20px;
+        margin: 30px;
       }
+    }
 
-      @include max-width(1100) {
-        width: 50%;
-        margin: 20px;
-      }
+    @include max-width(1250) {
+      width: 40%;
+    }
 
-      @include max-width(850) {
-        width: 70%;
-      }
+    @include max-width(1100) {
+      width: 60%;
+      margin: 20px;
+    }
+
+    @include max-width(850) {
+      width: 80%;
     }
   }
 }
