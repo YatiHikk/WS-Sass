@@ -1,0 +1,19 @@
+@import 'variables';
+
+@mixin font-reduction($fontSizeNew, $lineHeightNew) {
+  @include max-width(780) {
+    font-size: $fontSizeNew * 0.85;
+    line-height: $lineHeightNew * 0.85;
+  }
+
+  @include max-width(600) {
+    font-size: $fontSizeNew * 0.7;
+    line-height: $lineHeightNew * 0.7;
+  }
+}
+
+@mixin max-width($resolution) {
+  @media screen and (max-width: #{$resolution}px) {
+    @content;
+  }
+}

@@ -1,0 +1,154 @@
+@import 'variables';
+@import 'mixins';
+
+.main-bottom {
+  &__block {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 100px;
+
+    @include max-width(1100) {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    font-size: 60px;
+    width: 523px;
+    height: 140px;
+    margin-right: 250px;
+
+    @include max-width(1270) {
+      width: 70%;
+    }
+
+    @include max-width(1100) {
+      width: 100%;
+      text-align: center;
+      height: 100%;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__radio-button {
+    display: inline;
+    overflow: hidden;
+
+    @include max-width(1270) {
+      width: 45%;
+    }
+
+    label {
+      display: inline-block;
+      cursor: pointer;
+      line-height: 52px;
+      border-right: none;
+      user-select: none;
+      background: #f7f7fb;
+      width: 160px;
+      height: 55px;
+      color: #19191b;
+      text-align: center;
+
+      @include max-width(1270) {
+        width: 100%;
+      }
+    }
+
+    input[type='radio'] {
+      display: none;
+
+      &:checked + label {
+        background: #5454d4;
+        color: #fff;
+      }
+    }
+
+    .button-item {
+      &__year {
+        border-radius: $border-radius 0 0 $border-radius;
+      }
+
+      &__month {
+        border-radius: 0 $border-radius $border-radius 0;
+      }
+    }
+
+    .radio-button-item {
+      display: inline-block;
+      float: left;
+
+      @include max-width(1270) {
+        width: 50%;
+      }
+    }
+  }
+
+  &__card {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+
+    @include max-width(1100) {
+      flex-direction: column;
+      margin-top: 100px;
+    }
+
+    .card-block {
+      width: 330px;
+      height: 441px;
+      background: $white;
+      border-radius: $border-radius;
+      transition: $default-transition;
+
+      &:hover {
+        color: $white;
+        width: 376px;
+        height: 473px;
+        background: $accent-hover;
+        transition: $default-transition;
+        cursor: pointer;
+      }
+
+      &__button {
+        width: 285px;
+        height: 60px;
+        font-size: 17px;
+        border: 1px solid #eae9f2;
+        border-radius: $border-radius;
+        margin-top: 36px;
+        transition: $default-transition;
+      }
+
+      button {
+        background: $accent-hover-button;
+        color: $white;
+        transition: $default-transition;
+        border: none;
+      }
+
+      p,
+      h2,
+      text {
+        font-size: 20px;
+        margin: 30px;
+      }
+    }
+
+    @include max-width(1250) {
+      width: 40%;
+    }
+
+    @include max-width(1100) {
+      width: 60%;
+      margin: 20px;
+    }
+
+    @include max-width(850) {
+      width: 80%;
+    }
+  }
+}
